@@ -106,9 +106,92 @@
 
 <header>
   <h1>mord lion animations!</h1>
-  <a href="#features"><button class="button">Explore</button></a>
+  <a href="#features" class="button">Explore</a>
 </header>
-
+<section id="extreme-animations" style="animation: neonGlow 2s infinite alternate;">
+    <h2 style="font-size:2.5em; letter-spacing:2px; animation: shake 0.7s infinite alternate;">Mords Animations Zone!</h2>
+    <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:40px;">
+        <div class="extreme-card spin">
+            <span style="font-size:2em;">🌀</span>
+            <p>360° Spin</p>
+        </div>
+        <div class="extreme-card pulse">
+            <span style="font-size:2em;">💥</span>
+            <p>Pulsing Power</p>
+        </div>
+        <div class="extreme-card flip">
+            <span style="font-size:2em;">🔄</span>
+            <p>Flip Over</p>
+        </div>
+        <div class="extreme-card rainbow">
+            <span style="font-size:2em;">🌈</span>
+            <p>Rainbow Glow</p>
+        </div>
+    </div>
+</section>
+<style>
+@keyframes neonGlow {
+    from { box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7; }
+    to { box-shadow: 0 0 40px #ff00de, 0 0 80px #00fff7; }
+}
+@keyframes shake {
+    0% { transform: translateX(0);}
+    20% { transform: translateX(-10px);}
+    40% { transform: translateX(10px);}
+    60% { transform: translateX(-10px);}
+    80% { transform: translateX(10px);}
+    100% { transform: translateX(0);}
+}
+.extreme-card {
+    width: 170px;
+    height: 170px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px;
+    box-shadow: 0 0 20px #00fff7;
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+.extreme-card.spin {
+    animation: spin360 2s linear infinite;
+}
+@keyframes spin360 {
+    0% { transform: rotate(0);}
+    100% { transform: rotate(360deg);}
+}
+.extreme-card.pulse {
+    animation: pulseGlow 1s infinite alternate;
+}
+@keyframes pulseGlow {
+    from { box-shadow: 0 0 10px #ff00de, 0 0 20px #00fff7;}
+    to { box-shadow: 0 0 40px #ff00de, 0 0 80px #00fff7;}
+}
+.extreme-card.flip {
+    animation: flipCard 1.2s infinite alternate;
+}
+@keyframes flipCard {
+    from { transform: perspective(400px) rotateY(0);}
+    to { transform: perspective(400px) rotateY(180deg);}
+}
+.extreme-card.rainbow {
+    animation: rainbowGlow 1.5s linear infinite;
+}
+@keyframes rainbowGlow {
+    0% { box-shadow: 0 0 20px #ff0000;}
+    25% { box-shadow: 0 0 20px #fffb00;}
+    50% { box-shadow: 0 0 20px #00ff00;}
+    75% { box-shadow: 0 0 20px #00fff7;}
+    100% { box-shadow: 0 0 20px #ff00de;}
+}
+</style>
 <section id="features">
   <h2>Our Cool Featurescheck it out</h2>
   <div class="card-container">
